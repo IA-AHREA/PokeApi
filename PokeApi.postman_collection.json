@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "5c9b721c-e2e7-476d-a7c8-5bc7f9b04ce1",
+		"name": "PokeApi",
+		"description": "_**Colección de endpoints para probar el funcionamiento del codigo y su relación junto a la api de**_ :\n\n- [https://pokeapi.co/](https://pokeapi.co/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33532632"
+	},
+	"item": [
+		{
+			"name": "GetData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/pokemon?Value=6",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"pokemon"
+					],
+					"query": [
+						{
+							"key": "Value",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteData",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/pokemon?Value=6",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"pokemon"
+					],
+					"query": [
+						{
+							"key": "Value",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{local}}/ListPokemons"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
