@@ -1,0 +1,25 @@
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "App to test the api from pokeapi.co",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IA-AHREA/PokeApi.git"
+  },
+  "author": "A Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IA-AHREA/PokeApi/issues"
+  },
+  "homepage": "https://github.com/IA-AHREA/PokeApi#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1",
+    "morgan": "^1.10.0"
+  }
+}
