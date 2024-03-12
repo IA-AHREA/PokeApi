@@ -3,13 +3,13 @@ const axios = require('axios');
 const pokemonServices = require('../services/pokemonServices');
 const mongoService = new pokemonServices();
 
-// Controlador para obtener todos los Pokémon
+// Controlador para obtener todos los pokemon
 exports.getPokemons = async (req, res) => {
     try {
          // Extraer el valor del parámetro de la URL
          const pokemonName = req.query.Value;
 
-         // Hacer una solicitud a la API de Pokémon para buscar el pokemon
+         // Hacer una solicitud a la API de pokemon para buscar el pokemon
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         
 
@@ -26,7 +26,7 @@ exports.getPokemons = async (req, res) => {
         });
 
 
-        // Extraer la información del Pokémon de la respuesta
+        // Extraer la información del pokemon de la respuesta
         const pokemonData = {
             id: response.data.id,
             name: response.data.name,
@@ -39,7 +39,7 @@ exports.getPokemons = async (req, res) => {
         await mongoService.insertOne(pokemonData);
         await mongoService.disconnect();
 
-        // Enviar la respuesta al cliente con la información del Pokémon encontrado
+        // Enviar la respuesta al cliente con la información del pokemon encontrado
         return res.status(200).json(pokemonData);
 
         
